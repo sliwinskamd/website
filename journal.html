@@ -1,0 +1,23 @@
+---
+layout: default
+title: Journal
+permalink: /journal/
+---
+<header class="journal-header">
+  <h1>Journal</h1>
+  <p>Evidence-based insights on hormonal health, metabolism, and building sustainable habits.</p>
+</header>
+
+<div class="journal-list">
+  {% for post in site.posts %}
+  <article class="journal-post reveal">
+    <div class="post-meta">
+      <span class="post-tag">{{ post.category }}</span>
+      <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+    </div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="excerpt">{{ post.excerpt }}</p>
+    <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
+  </article>
+  {% endfor %}
+</div>

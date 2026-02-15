@@ -1,0 +1,31 @@
+title: Dr. A Sliwinska, MD — Endocrinology & Lifestyle Medicine
+description: A practice rooted in evidence-based endocrinology and the art of building lasting healthy habits.
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /journal/:slug/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /journal/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .venv
+  - .claude
+  - "*.heic"
+  - "*.Identifier"

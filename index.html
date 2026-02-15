@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Endocrinology & Lifestyle Medicine</span>
+    <h1>Understanding your nature is the first step to <em>enhancing it</em></h1>
+    <p>A practice rooted in evidence-based endocrinology and the art of building lasting healthy habits — because true wellness begins with understanding how your body works.</p>
+    <a href="#journal" class="hero-cta">
+      Read the Journal
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="philosophy" id="about">
+  <div class="philosophy-img reveal">
+    <img src="{{ '/assets/mission.jpg.JPG' | relative_url }}" alt="Dr. A Sliwinska, MD">
+  </div>
+  <div class="philosophy-text reveal">
+    <h2>Medicine that sees the whole person</h2>
+    <p>My approach merges clinical endocrinology with lifestyle medicine — looking beyond symptoms to understand the intricate hormonal systems that shape your energy, mood, metabolism, and vitality.</p>
+    <p>I believe the human body is not a problem to be fixed but a system to be understood. When we understand how our biology works, we unlock the ability to build habits that work with our nature rather than against it.</p>
+    <p>Every consultation begins with listening. Every treatment plan is a collaboration. Every patient is an individual.</p>
+  </div>
+</section>
+
+<section class="journal-preview" id="journal">
+  <div class="journal-preview-header reveal">
+    <h2>Journal</h2>
+    <p>Evidence-based insights on hormonal health, metabolism, and building sustainable habits.</p>
+  </div>
+  <div class="journal-grid">
+    {% for post in site.posts limit:3 %}
+    <article class="journal-card reveal">
+      <div class="card-tag">{{ post.category }}</div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | truncate: 140 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="reveal">
+    <h2>Stay in the loop</h2>
+    <p>Get evidence-based insights on hormonal health, metabolism, and sustainable habits delivered to your inbox.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault();">
+      <input type="email" class="newsletter-input" placeholder="Your email address" required>
+      <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="social" id="contact">
+  <div class="reveal">
+    <p class="social-label">Join the conversation</p>
+    <h2>Follow along</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-ig" aria-label="Instagram">
+        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1S3.8 127.9 2.1 163.8c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-fb" aria-label="Facebook">
+        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V330.3h-58.5V256h58.5v-56.6c0-57.7 34.4-89.6 87-89.6 25.2 0 51.5 4.5 51.5 4.5v56.6h-29c-28.6 0-37.5 17.7-37.5 35.9V256h63.9l-10.2 74.3h-53.7v174.2C429.3 476.8 512 376 512 256z"/></svg>
+        <span>Facebook</span>
+      </a>
+      <a href="https://www.x.com" target="_blank" rel="noopener" class="social-x" aria-label="X">
+        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+        <span>X</span>
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="social-tt" aria-label="TikTok">
+        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3v178.8A162.6 162.6 0 1 1 185 188.3v89.9a74.6 74.6 0 1 0 52.2 71.2V0h88a121 121 0 0 0 1.9 22.2 121.4 121.4 0 0 0 68 84.8 120.7 120.7 0 0 0 53 13.4v89.5z"/></svg>
+        <span>TikTok</span>
+      </a>
+    </div>
+  </div>
+</section>
